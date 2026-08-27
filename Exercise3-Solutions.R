@@ -13,6 +13,15 @@
 library(ggplot2)
 
 
+############################################################
+# Note: This script assumes you already created airquality_ozone in Exercise 2. 
+# If you are running Exercise 3 independently, add:
+
+data("airquality")
+airquality_ozone <- airquality[!is.na(airquality$Ozone), ]
+
+############################################################
+
 # ----------------------------------------------------------
 # 2. Create a basic plot using ggplot()
 # ----------------------------------------------------------
@@ -137,8 +146,3 @@ ggplot(
     y = "Ozone Concentration"
   ) +
   theme_minimal()
-
-
-############################################################
-# END OF EXERCISE 3
-############################################################
